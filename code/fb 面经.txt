@@ -1,0 +1,138 @@
+老师 我上次面twitter电面面了二分查找的原题，print all path from root to leaves
+
+rotated subarray; if duplicate, cannot find some one use binary search.
+
+请问一下，面试实习生如果挂了（没有面全职），那么找全职会有冷冻期吗？如果实习面试表现不好，在面全职的时候是不是也会有影响（听说过这样的案例）？
+
+left<right-1
+First bad version;
+minimum in a rotated sorted array; 
+
+class 3:
+
+balanced-binary-tree
+	resultType 写的简单，逻辑清楚，别人能看懂；
+lowest common ancester i-ii;
+binary tree level order traversal;
+
+
+嗯，professor也说过readability是第一位的、
+Q: 工作中老板也说逻辑清楚是最重要的
+A: 是的
+
+G家的面试什么都考：并查集，线段树，平衡树；
+amazon 很爱考二叉树和DP
+A: 是的
+
+搜索题；
+
+longest increasing subsequence
+
+
+http://www.lintcode.com/en/problem/inorder-successor-in-binary-search-tree/
+
+
+
+第一次电面的题目之前在面经里看过，就是那个task schedual. 1point3acres.com/bbs
+给了一串task，不同的task可能属于不同type。这些task要放到CPU里运行，运行同一种type是要考虑一个冷却时间。
+举个栗子：thread是1,2,3,1不能改顺序， 冷却时间3，运行起来就是1, 2, 3, _, 1时间就是5.要返回总运行时间5
+我是用hashmap，key是该task的数字，value是上次运行这个task的时间。
+follow up是如果可以改变顺序，最少要运行多少时间
+
+
+Schedule time 每个task有一个缓冲时间，做完一个task i 必须隔 time i 才能做下一个task i，但是如果接下来做task j 是可以直接做的。 给一个task list，问多久能做完
+
+
+You have 2 sparse vectors (large number of 0’s). First tell me a way to represent and store them, and then find the dot product. 你的题是这个吗？
+
+Sparse Matrix一般用CSR （Compressed row Storage）存;
+先问了稀疏向量点乘，然后问矩阵的follow up。记不太清了，说的是矩阵非常大，不能像这样直接计算，因为内存不够放不下
+http://www.cnblogs.com/jcliBlogger/p/5015959.html
+
+上来先聊了简历大概10分钟;
+小哥说机器学习经常要处理sparse feature vector的情况，问我应该怎么更高效地存储和计算。 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+一开始我说用dict存index和对应的值，但是小哥说他觉得dict(hashtable)不是他想要的，他就想要用list。. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+然后我用list存之后，当时太紧张了，算点积的时候脑残到用了个O(mn)的时间复杂度。小哥果然说时间复杂度太高，我一想O(max(m,n))就可以啊，于是赶紧边写边说。。写到这时间都没多少了，然后小哥说有个follow up，一个vector远大于另一个vector怎么降低复杂度，我想了一会说我还是想用dict。。小哥说我明白你的意思，问我复杂度，我说这下应该是O(min(m,n))了，小哥说你假设读字典是constant time对吗，我说是的。。然后问了两个问题就结束了。我说我太紧张了，小哥还安慰我： I think you did a good job.......
+
+
+char ch = -1;
+	unsigned short a = (unsigned short)ch,
+		b = (unsigned char)ch;
+a == 65535, b==255??
+
+
+LCA(lowerst common ancestor),LIS(longest incresing subsequence),LCS(longest consecutive subsequence)
+
+isPalindrome2
+
+http://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-1/
+http://www.1point3acres.com/bbs/thread-167201-1-1.html
+。问了下project，用什么语言和project中最technical difficult的part。
+teamwork; 
+问你最困难的一个项目是什么，怎么解决困难的。
+
+店面问的是稀疏数组的inner product
+一开始说连个hashmap，小哥说hashmap会浪费掉多余空间，我说那如果一个特别大的话就扫小一点的那个array，然后在特别大的array中用binary search，他说写代码。写完代码接着说，那如果差不多大，我说那就两个指针按照merge sort那么扫。然后我觉得基本都行了，他最后说那有没有O(Math.min(m, n))的方法。我鼓捣半天，最后说了个那就输入直接是一个tuple，第一个elem是位置（这个位置在两个array中必须都不是0），然后扫一遍就行了。其实我感觉他的意思是再用HashMap。不过他忘了之前和我说太浪费空间了。。。
+
+count islands --> dfs & disjoint set
+
+fibb % 10 : 让你找%10，你可以先找%2的规律，然后找%5的规律，然后就可以知道%10的规律了。这种是必然有规律，根本不用去屌面试官。如果是数学系的，估计就能教育一下面试官了。
+
+题目是给两个巨型的向量（矩阵），有很多很多的零，求他们的dot product。 
+一开始忘了这个概念，他给我举了个例子，就是所有下标相同的元素相乘，最后求和。
+You have 2 sparse vectors (large number of 0’s). First tell me a way to represent and store them, and then find the dot product. 你的题是这个吗？
+Sparse Matrix一般用CSR （Compressed row Storage）存
+
+小哥说机器学习经常要处理sparse feature vector的情况，问我应该怎么更高效地存储和计算。
+一开始我说用dict存index和对应的值，但是小哥说他觉得dict(hashtable)不是他想要的，他就想要用list。. From 1point 3acres bbs
+然后我用list存之后，当时太紧张了，算点积的时候脑残到用了个O(mn)的时间复杂度。小哥果然说时间复杂度太高，我一想O(max(m,n))就可以啊，于是赶紧边写边说。。写到这时间都没多少了，然后小哥说有个follow up，一个vector远大于另一个vector怎么降低复杂度，我想了一会说我还是想用dict。。小哥说我明白你的意思，问我复杂度，我说这下应该是O(min(m,n))了，小哥说你假设读字典是constant time对吗，我说是的。。然后问了两个问题就结束了。我说我太紧张了，小哥还安慰我： I think you did a good job.......
+
+
+
+merge sorted array 原题：https://leetcode.com/problems/merge-sorted-array/
+我写了两个while  他问我什么时候需要第二个while什么时候不需要  然后我说了一下
+
+写一个merge sort
+space complexity: O(NlogN)
+
+两道 LC原题 
+   1) valid Palindrome
+   2) reverse words in a string 
+
+   第二轮： 一道面经题
+  sum of submatrix (m x n)
+   1) brute force, O(mn) method
+   2) O(1) method. 鍥磋
+   int sumOfSubMatrix( int[][] mat, int leftTop, int rightBot)
+sum of largest submatrix equals to k?
+
+1, Read4
+2, Minimum tree height
+3, LRU cache
+
+题目不是很难， mergeKsortedarray， 我代码也完全码出来了。runtime  也解释了， 不明白 为什么要挂我。 
+
+check consecutive subarray duplicate numbers
+大家都在问第一题，大概是这个意思：给一个array, 然后给一个k, 让你check 连续的k个integer是否含有dulplicate, 很简单的，用窗口为K的hashset一直扫一遍就行了，很简单
+应该是这个题，https://leetcode.com/problems/contains-duplicate-ii/
+
+https://leetcode.com/problems/longest-valid-parentheses/
+第二题不是原题  说错了. 1point3acres.com/bbs
+()()))()  -> ()()(). 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+)(( ->
+(())(() -> (())()
+http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=174196&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3046%5D%5Bvalue%5D%3D2%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26sortid%3D311
+
+ 
+http://www.geeksforgeeks.org/find-subarray-with-given-sum/
+3D takes it to a matrix.
+
+Onsite: 
+给一个string(全是digit), 给一个target value, 在string里任意插+或-，使得string的值等于target value. . 
+
+
+
+
+
+
+
