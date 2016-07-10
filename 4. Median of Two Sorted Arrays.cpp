@@ -1,12 +1,10 @@
 class Solution {
     // !!!!!!!!!
-    // in exp: s1 > A.size()-1;
-    // if A.size() = 0, A.size()-1 would be 2^31;
-    // becuase arithmatic of unsigned int would still be unsigned int
-    // so instead use s1 >= A.size()
+    // ERROR1. in exp: s1 > A.size()-1; if A.size() = 0, A.size()-1 would be 2^31;
+    // becuase arithmatic of unsigned int would still be unsigned int. So instead use s1 >= A.size()
     // Error2: 第k/2个数字的下表是s1+idx-1 而不是 s1+idx
-    // Error3: 如果数组长度不够，那么就用INT_MAX, 而不是INT_MIN 
-    // 自己想想为什么
+    // Error3: 如果数组长度不够，那么就用INT_MAX, 而不是INT_MIN; 
+	// Error4: cnt could < idx
 	int findKthNumber(vector<int> &A, int s1, vector<int> &B, int s2, int k) {
 		if (s1 >= A.size()) return B[s2 + k - 1];
 		if (s2 >= B.size()) return A[s1 + k - 1];
