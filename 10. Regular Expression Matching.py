@@ -1,4 +1,4 @@
-# implemented finite state machine below
+# implemented NFA below. Improvement: convert NFA to DFA first: refer to https://www.geeksforgeeks.org/conversion-from-nfa-to-dfa/
 # Leetcode has more concise dp or recursion algorithms:
 # https://leetcode.com/problems/regular-expression-matching/solution/
 
