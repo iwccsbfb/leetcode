@@ -7,7 +7,7 @@ class Solution:
             if (len(s), len(p)) in d:
                 return d[len(s), len(p)]
             #nonlocal count
-            #count += 1
+            # count = count +  1
             if len(p) == 0:
                 res = len(s) == 0
             elif p[0] == '*':
