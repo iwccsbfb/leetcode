@@ -6,3 +6,5 @@
 *.a
 *.so
 *.json  # ignore vs code config file
+.vs/
+.vscode/
